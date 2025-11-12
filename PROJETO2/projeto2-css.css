@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(167, 219, 228, 0.486); 
+  color: #000000;
+  font-size: 20px;
+  justify-content: center; 
+  align-items: center;    
+  width: 70%;
+  margin: auto;
+  max-width: 1000px;
+}
+
+.cabecalho {
+  background-color: #004080;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  max-width: 1000px;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.foto {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 10px; 
+}
+
+.secao {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 1000px;
+}
+
+.objetivo {
+  background-color: #ff0000a2; 
+}
+
+.formações {
+  background-color: #1730a091; 
+}
+
+.habilidades {
+  background-color: #7700ffa8; 
+}
+
+.caixaAZUL {
+  background-color: rgba(91, 45, 145, 0.322);
+  padding: 20px;
+  border: 3px solid black;   
+  border-left: 10px solid #004080; 
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.caixaVERM {
+  background-color: rgba(197, 49, 49, 0.322);
+  padding: 20px;
+  border: 3px solid black;  
+  border-left: 10px solid #800000;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.caixaROXA {
+  background-color: rgba(194, 48, 238, 0.322);
+  padding: 20px;
+  border: 3px solid black;  
+  border-left: 10px solid #4c0e7e;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 90%;
+  }
+
+  .perfil {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .foto {
+    width: 200px;
+    height: 200px;
+  }
+
+  .secao {
+    padding: 15px;
+  }
+
+  .caixaAZUL, .caixaVERM, .caixaROXA {
+    padding: 15px;
+    margin: 10px 0;
+  }
+}
