@@ -85,7 +85,7 @@ O protótipo foi desenvolvido no **Canva**:
 
 - Baixe/clonar este repositório e abra o arquivo `index.html` no navegador.  
 - Ou acesse diretamente pelo **GitHub Pages**:  
-  👉 [Clique aqui para abrir o site](https://luisbodezan.github.io/Portfolio_Parte1/)  
+  👉 [Clique aqui para abrir o site](https://luisbodezan.github.io/Portfolio_Parte2/)  
 
 ---
 
@@ -110,5 +110,5 @@ Este projeto foi desenvolvido para **fins educacionais** como parte da disciplin
 **Luis Gustavo de Moura Bodezan – RA: 248054**  
 Curso: Engenharia da Computação – Turma A  
 Email: (luis.bodezan@gmail.com)  
-GitHub: 👉 [Clique aqui](hhttps://github.com/LuisBodezan)  
+GitHub: 👉 [Clique aqui](https://github.com/LuisBodezan)  
 LinkedIn: 👉 [Clique aqui](https://www.linkedin.com/in/luis-gustavo-bodezan-11aa68347)
