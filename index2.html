@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Luis Gustavo</title>
+
+  <script src="script2.js" defer></script>
+  <link rel="stylesheet" href="style2.css">
+
+  <!-- Biblioteca de ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init({ publicKey: "zDLDr1Axqwg-dQ2i-" });
+  })();
+</script>
+
+</head>
+
+<body>
+  <!-- MODAL ANÚNCIO -->
+  <div class="modal-overlay" id="modal-anuncio">
+    <div class="modal">
+      <h2>🚀 Novo Projeto!</h2>
+      <img src="IMAGENS/bet.jpg" alt="Bet" class="modal-img">
+      <p>Clique no botão para visitar o site.</p>
+      <button id="btn-anuncio">Fechar</button>
+    </div>
+  </div>
+
+  <!-- MODAL COOKIES -->
+  <div class="modal-overlay" id="modal-cookies">
+    <div class="modal">
+      <h2>🍪 Cookies</h2>
+      <p>Usamos cookies para melhorar sua experiência. Aceita?</p>
+      <button id="btn-aceitar-cookies">Aceitar</button>
+      <button id="btn-recusar-cookies">Recusar</button>
+    </div>
+  </div>
+
+  <!-- MODAL TERMOS DE USO -->
+  <div class="modal-overlay" id="modal-termos">
+    <div class="modal">
+      <h2>📜 Termos de Uso</h2>
+      <p>Ao continuar navegando, você concorda com os termos de uso.</p>
+      <button id="btn-aceitar-termos">Aceitar</button>
+    </div>
+  </div>
+
+  <!-- MODAL BEM-VINDO PORTFÓLIO -->
+  <div class="modal-overlay" id="modal-bemvindo">
+      <div class="modal">
+       <h2>🎉 Bem-vindo ao Portfólio!</h2>
+        <p>Explore meus projetos e conteúdo!</p>
+       <button id="btn-fechar-bemvindo">Fechar</button>
+      </div>
+  </div>
+
+  <div id="barra-saudacao">
+    <span id="texto-saudacao"></span>
+  </div>
+
+  <!-- =================== NAVBAR =================== -->
+  <header>
+    <div class="nome">Luis Gustavo de Moura Bodezan</div>
+    
+    <nav>
+      <a href="#sobre-mim">👱🏻‍♂️ Sobre Mim</a>
+      <a href="#biografia">📖 Biografia</a>
+      <a href="#formacoes">👨‍🎓 Formações</a>
+      <a href="#projetos">💻 Projetos</a>
+      <a href="#contato">📩Contato</a>
+
+      <!-- Botão para alternar entre modo claro/escuro -->
+      <button id="btn-tema" class="btn-tema">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Ícone de menu -->
+  <button id="menu-icon" class="menu-icon">☰</button>
+
+  <!-- Menu hambúrguer -->
+  <nav id="menu-mobile" class="menu-mobile">
+    <ul>
+      <li><a href="#sobre-mim">👱🏻‍♂️ Sobre Mim</a></li>
+      <li><a href="#biografia">📖 Biografia</a></li>
+      <li><a href="#formacoes">👨‍🎓 Formações</a></li>
+      <li><a href="#projetos">💻 Projetos</a></li>
+      <li><a href="#contato">📩Contato</a></li>
+
+      <button id="btn-tema-mobile" class="btn-tema">🌙</button>
+   </ul>
+  </nav>
+
+  <!-- =================== SEÇÃO SOBRE MIM =================== -->
+  <section id="sobre-mim">
+    <h2>Sobre Mim</h2>
+
+    <!-- Carrossel -->
+    <div class="cena">
+      <div class="carrossel" id="carrossel3D">
+        <!-- Cada “slide” representa uma imagem do carrossel -->
+        <div class="slide"><img src="IMAGENS/perfil1.jpg" alt="Perfil 1"></div>
+        <div class="slide"><img src="IMAGENS/perfil2.jpg" alt="Perfil 2"></div>
+        <div class="slide"><img src="IMAGENS/perfil3.jpg" alt="Perfil 3"></div>
+        <div class="slide"><img src="IMAGENS/perfil4.jpg" alt="Perfil 4"></div>
+        <div class="slide"><img src="IMAGENS/perfil5.jpg" alt="Perfil 5"></div>
+        <div class="slide"><img src="IMAGENS/perfil6.jpg" alt="Perfil 6"></div>
+        <div class="slide"><img src="IMAGENS/perfil7.jpg" alt="Perfil 7"></div>
+        <div class="slide"><img src="IMAGENS/perfil8.jpg" alt="Perfil 8"></div>
+      </div>
+    </div>
+
+    <!-- Indicadores (bolinhas abaixo do carrossel) -->
+    <div class="indicadores">
+      <div class="indicador ativo" onclick="irParaSlide(0)"></div>
+      <div class="indicador" onclick="irParaSlide(1)"></div>
+      <div class="indicador" onclick="irParaSlide(2)"></div>
+      <div class="indicador" onclick="irParaSlide(3)"></div>
+      <div class="indicador" onclick="irParaSlide(4)"></div>
+      <div class="indicador" onclick="irParaSlide(5)"></div>
+      <div class="indicador" onclick="irParaSlide(6)"></div>
+      <div class="indicador" onclick="irParaSlide(7)"></div>
+    </div>
+
+    <div class="quadrilatero">
+      <h4>Olá! Sou Luis Gustavo, estudante de Engenharia da Computação apaixonado por tecnologia e desenvolvimento de software.
+      Estou em busca da minha primeira oportunidade para aplicar meus conhecimentos, aprender na prática e contribuir com projetos reais.</h4>
+      <br>
+      <h4><strong>Habilidades:</strong> Lógica de programação, HTML, CSS, comprometimento, organização, rápido aprendizado e excelente comunicação 
+      interpessoal.</h4>
+    </div>
+  </section>
+
+  <!-- =================== SEÇÃO BIOGRAFIA =================== -->
+  <section id="biografia">
+    <h2>BIOGRAFIA</h2>
+    <div class="quadrilatero">
+      <h4>Sou natural de Santos/SP e desde cedo tive interesse pela área da tecnologia. Sempre gostei de desmontar aparelhos, entender como 
+        funcionam e buscar soluções criativas para problemas. 
+        <br><br>
+        Atualmente curso Engenharia da Computação e busco aprofundar meus conhecimentos 
+        em desenvolvimento de software, eletrônica e sistemas embarcados.</h4>
+    </div>
+  </section>
+
+  <!-- =================== SEÇÃO FORMAÇÕES =================== -->
+  <section id="formacoes">
+    <h2>FORMAÇÕES</h2>
+
+    <div class="quadrilatero">
+      <h3>Engenharia da Computação</h3>
+      <h4>Universidade Santa Cecília – Noturno, 2º período<br>
+      Previsão de formatura: Dez/2029</h4>
+    </div>
+
+    <div class="quadrilatero">
+      <h3>Ensino Médio Integrado com Técnico em Eletrônica</h3>
+      <h4>ETEC Aristóteles Ferreira – Santos/SP<br>
+      Conclusão: Dez/2024</h4>
+    </div>
+  </section>
+
+  <!-- =================== SEÇÃO PROJETOS =================== -->
+  <section id="projetos">
+    <h2>PROJETOS</h2>
+    <div class="projeto-container">
+
+      <div class="projeto">
+        <img src="IMAGENS/imgPROJETO1.jpg" alt="Projeto 1">
+        <h3>Página de Apresentação</h3>
+        <h4>Projeto de página inicial de apresentação pessoal.</h4>
+        <h4 class="linguagens">HTML</h4>
+        <a href="PROJETO1/projeto1-html.html" target="_blank" class="btn-projeto">Projeto</a>
+        <a href="PROJETO1/código1-html.txt" target="_blank" class="btn-codigo">Código</a>
+      </div>
+
+      <div class="projeto">
+        <img src="IMAGENS/imgPROJETO2.jpg" alt="Projeto 2">
+        <h3>Currículo Online</h3>
+        <h4>Projeto de currículo online.</h4>
+        <h4 class="linguagens">HTML + CSS</h4>
+        <a href="PROJETO2/projeto2-html.html" target="_blank" class="btn-projeto">Projeto</a>
+        <a href="PROJETO2/código2-html.txt" target="_blank" class="btn-codigo">Código HTML</a>
+        <a href="PROJETO2/código2-css.txt" target="_blank" class="btn-codigo">Código CSS</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =================== SEÇÃO CONTATO =================== -->
+  <section id="contato">
+    <h2>CONTATO</h2>
+    <div class="contato-container">
+
+      <div class="cards">
+        <div class="card-contato">
+          <h4>Email</h4>
+          <p>luis.bodezan@gmail.com</p>
+        </div>
+
+        <div class="card-contato">
+          <h4>Telefone</h4>
+          <p>(13)98128-2911</p>
+        </div>
+
+        <div class="card-contato">
+          <h4>LinkedIn</h4>
+          <a href="https://www.linkedin.com/in/luis-gustavo-bodezan-11aa68347" target="_blank">Luis Gustavo Bodezan</a>
+        </div>
+
+        <div class="card-contato">
+          <h4>Instagram</h4>
+          <a href="https://www.instagram.com/luis_gustavo_lgmb/" target="_blank">@luis_gustavo_lgmb</a>
+        </div>
+
+        <div class="card-contato">
+          <h4>GitHub</h4>
+          <a href="https://github.com/Luis-Bodezan00" target="_blank">Luis-Bodezan00</a>
+        </div>
+      </div>
+
+      <!-- ================= FORMULÁRIO DE CONTATO ================= -->
+<div class="formulario">
+  <h3>Envie uma Mensagem</h3>
+
+  <form id="contato-form">
+    <div class="campo">
+      <label for="from_name">Nome</label>
+      <input type="text" id="from_name" name="from_name" placeholder="Digite seu nome">
+      <span id="erro-nome" class="erro-msg"></span>
+    </div>
+
+    <div class="campo">
+      <label for="to_email">E-mail</label>
+      <input type="text" id="to_email" name="to_email" placeholder="Digite seu e-mail">
+      <span id="erro-email" class="erro-msg"></span>
+    </div>
+
+    <div class="campo">
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" placeholder="Digite sua mensagem" rows="5"></textarea>
+      <span id="erro-mensagem" class="erro-msg"></span>
+    </div>
+
+    <button type="submit" class="btn-projeto">Enviar</button>
+  </form>
+
+  <p id="status"></p>
+</div>
+</div> 
+</section>
+
+  <!-- =================== RODAPÉ =================== -->
+  <footer>
+    © 2025 Luis Gustavo de Moura Bodezan
+  </footer>
+
+</body>
+</html>

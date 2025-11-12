@@ -1,0 +1,128 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  overflow: hidden;
+  height: 100vh;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* ========== CONTEUDO ========== */
+.conteudo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+}
+
+.conteudo h1 {
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  font-size: 3.5rem;
+  color: #f3008e;
+  margin-bottom: 20px;
+  transition: color 0.5s;
+}
+
+.conteudo p {
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  font-size: 25px;
+  margin-bottom: 30px;
+  color: #fff;
+  transition: color 0.5s;
+}
+
+/* ========== BOTÃO ========== */
+.botao {
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #f3008e, #31e6f0);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  box-shadow: 0 0 15px #f3008e;
+}
+
+.botao:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #f3008e, 0 0 25px #31e6f0;
+}
+
+/* ========== BOTÃO TEMA ========== */
+#botao-tema {
+  display: block;
+  margin: 30px auto 0;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #31e6f0;
+  color: #0b132b;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#botao-tema:hover {
+  background: #f3008e;
+  color: #0b132b;
+  transform: scale(1.05);
+}
+
+/* ========== MODO CLARO ========== */
+body.claro {
+  background: #E8F1F9;
+  color: #0B132B;
+}
+
+body.claro .conteudo h1 {
+  color: #007BFF;
+}
+
+body.claro .botao {
+  background: linear-gradient(135deg, #F5C542, #007BFF);
+  color: #0B132B;
+  border: 2px solid #0B132B;
+  box-shadow: 0 0 10px #007BFF;
+}
+
+body.claro .botao:hover {
+  background: linear-gradient(135deg, #007BFF, #F5C542);
+  box-shadow: 0 0 20px #F5C542;
+}
+
+body.claro #botao-tema {
+  background: #007BFF;
+  color: #fff;
+}
+
+body.claro #botao-tema:hover {
+  background: #F5C542;
+  color: #0B132B;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .conteudo h1 {
+    font-size: 2.2rem;
+  }
+
+  .conteudo p {
+    font-size: 1rem;
+  }
+
+  .botao {
+    font-size: 1rem;
+    padding: 12px 30px;
+  }
+}

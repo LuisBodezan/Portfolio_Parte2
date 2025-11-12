@@ -1,0 +1,1235 @@
+/* ==================== MODAIS ==================== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.modal {
+  background: #1a1a1a;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 420px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 20px #31e6f0;
+}
+
+.modal h2 {
+  color: #31e6f0;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.modal button {
+  background-color: #31e6f0;
+  color: #0d0d0d;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.modal button:hover {
+  background-color: #f3008e;
+  color: white;
+}
+
+.modal-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ==================== MODAIS - TEMA CLARO ==================== */
+body.light .modal-overlay {
+  background: rgba(255, 255, 255, 0.8); /* fundo translúcido mais claro */
+}
+
+body.light .modal {
+  background: #007bff81; /* fundo azul-gelo */
+  border-radius: 14px;
+  width: 90%;
+  max-width: 420px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 20px #00C0FF; /* sombra azul */
+  color: #0B132B; /* texto escuro */
+  transition: all 0.4s ease;
+}
+
+body.light .modal h2 {
+  color: #F5C542; /* título dourado */
+  margin-bottom: 10px;
+  transition: color 0.4s ease;
+}
+
+body.light .modal p {
+  color: #0B132B; /* texto escuro */
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  transition: color 0.4s ease;
+}
+
+body.light .modal button {
+  background-color: #00C0FF; /* azul */
+  color: #0B132B; /* texto escuro */
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+body.light .modal button:hover {
+  background-color: #F5C542; /* dourado no hover */
+  color: #0B132B; /* texto escuro */
+}
+
+body.light .modal-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 3px solid #00C0FF; /* contorno azul */
+  box-shadow: 0 0 15px #00C0FF; /* sombra azul */
+  transition: all 0.5s ease;
+}
+
+body.light .modal-img:hover {
+  border-color: #F5C542; /* muda para dourado ao passar o mouse */
+  box-shadow: 0 0 20px #F5C542;
+}
+
+/* ==================== MENU ==================== */
+.menu-icon {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  font-size: 2rem;
+  color: #31e6f0; /* azul padrão do tema escuro */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none; /* começa invisível */
+  z-index: 999;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.2);
+  color: #f5c542; /* amarelo no hover */
+}
+
+/* versão para tema claro */
+body.light .menu-icon {
+  color: #004C99;
+}
+
+/* Menu lateral oculto */
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  left: -250px; /* escondido fora da tela */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(20, 20, 30, 0.95);
+  backdrop-filter: blur(5px);
+  box-shadow: -4px 0 10px rgba(0,0,0,0.3);
+  transition: left 0.5s ease;
+  z-index: 9998;
+}
+
+body.light .menu-mobile {
+  background-color: #1177e4af;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.3);
+}
+
+.menu-mobile ul {
+  list-style: none;
+  padding: 80px 20px;
+}
+
+.menu-mobile li {
+  margin: 20px 0;
+}
+
+.menu-mobile a {
+  color: #31e6f0;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu-mobile a:hover {
+  color: #f5c542;
+}
+
+/* menu ativo (visível) */
+.menu-mobile.active {
+  left: 0;
+}
+
+/* ==================== TEMA CLARO (ATUALIZADO) ==================== */
+body.light {
+  background: #E8F1F9;         /* azul-gelo suave */
+  color: #0B132B;              /* azul escuro profundo */
+  transition: all 0.5s ease;
+}
+
+/* ---------- BARRAS SUPERIOR E INFERIOR ---------- */
+body.light header,
+body.light footer {
+  background: linear-gradient(90deg, #F5C542, #007BFF);  /* gradiente dourado → azul */
+  color: #0B132B;
+  box-shadow: 0 0 15px #007BFF;
+  transition: all 0.5s ease;
+}
+
+body.light header .nome,
+body.light header nav a,
+body.light .menu-mobile a {
+  background: #E0C36B;         
+  border: 1px solid #0B132B;
+  color: #0B132B;
+  transition: all 0.3s ease;
+}
+
+body.light header nav a:hover,
+body.light .menu-mobile a:hover {
+  background: linear-gradient(135deg, #F5C542, #007BFF);
+  color: #fff;
+  border-color: #F5C542;
+  box-shadow: 0 0 20px #007BFF;
+}
+
+/* ---------- SEÇÕES ---------- */
+body.light section {
+  background: rgba(0, 123, 255, 0.08); /* leve fundo azul translúcido */
+  border-top: 20px solid #007BFF;
+  border-left: 2px solid #007BFF;
+  border-right: 2px solid #007BFF;
+  border-bottom: 20px solid #007BFF;
+  border-radius: 2%;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+  transition: all 0.4s ease;
+}
+
+body.light section:hover {
+  border-top: 20px solid #F5C542;
+  border-left: 2px solid #F5C542;
+  border-right: 2px solid #F5C542;
+  border-bottom: 20px solid #F5C542;
+  box-shadow: 0 0 25px #F5C542;
+}
+
+/* ---------- SEÇÃO SOBRE MIM ---------- */
+body.light #sobre-mim {
+  background: rgba(0, 123, 255, 0.08); /* leve fundo azul translúcido */
+  color: #0B132B;
+  border-top: 20px solid #007BFF;
+  border-left: 2px solid #007BFF;
+  border-right: 2px solid #007BFF;
+  border-bottom: 20px solid #007BFF;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+body.light #sobre-mim:hover {
+  border-top: 20px solid #F5C542;
+  border-left: 2px solid #F5C542;
+  border-right: 2px solid #F5C542;
+  border-bottom: 20px solid #F5C542;
+  box-shadow: 0 0 30px #F5C542;
+  transform: scale(1.02);
+}
+
+/* ---------- QUADRILÁTEROS ---------- */
+body.light .quadrilatero {
+  background: #F7FCFF;
+  border: 2px solid #007BFF;
+  box-shadow: 0 0 10px #007BFF;
+}
+
+body.light .quadrilatero:hover {
+  box-shadow: 0 0 15px #F5C542;
+  border: 2px solid #F5C542;
+}
+
+body.light .quadrilatero:hover {
+  box-shadow: 0 0 15px #F5C542;
+}
+
+body.light .quadrilatero h4 {
+  font-size: 20px;
+  margin: 5px;
+  font-weight: normal;
+  transition: all 0.3s ease;
+}
+
+
+body.light .quadrilatero h4:hover {
+  transform: scale(1.05);
+  border: 2px solid #007BFF;
+  
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.2);
+}
+
+/* ---------- TÍTULOS E TEXTOS ---------- */
+body.light h2 {
+  color: #0B132B;
+  text-shadow: none;
+}
+
+body.light h1,
+body.light h3,
+body.light h4,
+body.light p {
+  color: #0B132B;
+}
+
+/* Destaque em amarelo ao passar o mouse */
+body.light h2:hover,
+body.light h3:hover {
+  color: #F5C542;
+  text-shadow: 0 0 15px #F5C542;
+}
+
+/* ---------- PROJETOS ---------- */
+body.light .projeto {
+  background: #E8F1F9;
+  border: 2px solid #007BFF;
+  box-shadow: 0 0 15px #007BFF;
+  transition: all 0.4s ease;
+}
+
+body.light .projeto:hover {
+  background: #F5C542;
+  box-shadow: 0 0 25px #007BFF;
+  transform: scale(1.05);
+}
+
+body.light .projeto img {
+  border: 3px solid #007BFF;
+  box-shadow: 0 0 20px #007BFF;
+  transition: all 0.5s ease;
+}
+
+body.light .projeto:hover img {
+  border: 3px solid #007BFF;
+  box-shadow: 0 0 20px #007BFF;
+}
+
+body.light .projeto h3:hover,
+body.light .projeto h4:hover,
+body.light .quadrilatero h3:hover {
+  color: #0B132B;
+  border: 2px solid #007BFF;
+}
+
+
+
+/* ---------- BOTÕES ---------- */
+body.light .btn-projeto,
+body.light .btn-codigo {
+  background: linear-gradient(135deg, #F5C542, #007BFF);
+  color: #0B132B;
+  border: 2px solid #0B132B;
+  box-shadow: 0 0 10px #007BFF;
+  transition: all 0.4s ease;
+}
+
+body.light .btn-projeto:hover,
+body.light .btn-codigo:hover {
+  background: linear-gradient(135deg, #007BFF, #F5C542);
+  box-shadow: 0 0 20px #F5C542;
+  transform: scale(1.05);
+}
+
+/* ---------- FORMULÁRIO E CONTATO ---------- */
+body.light .card-contato,
+body.light .formulario {
+  background: #F7FCFF;
+  color: #0B132B;
+  box-shadow: 0 0 15px #007BFF;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+body.light .card-contato:hover,
+body.light .formulario:hover {
+  box-shadow: 0 0 25px #F5C542;
+}
+
+/* Títulos */
+body.light .card-contato h3,
+body.light .formulario h3,
+body.light .card-contato a,
+body.light .card-contato p,
+body.light .formulario p {
+  color: #0B132B;
+}
+
+body.light .card-contato:hover h3,
+body.light .card-contato:hover a,
+body.light .card-contato:hover p,
+body.light .formulario:hover p {
+  color: #007BFF;
+  border: 3px solid #007BFF;
+}
+
+/* ---------- CARROSSEL ---------- */
+body.light .cena {
+  perspective: 1000px;
+}
+
+body.light .slide {
+  border: 3px solid #007BFF;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+}
+
+body.light .indicador {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+body.light .indicador.ativo {
+  background: #007BFF;
+}
+
+body.light .indicador:hover {
+  background: #F5C542;
+  transform: scale(1.2);
+}
+
+/* ======== CARROSSEL DE IMAGENS ======== */
+.cena {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrossel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid #31e6f0;
+  box-shadow: 0 0 15px rgba(49, 230, 240, 0.5);
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+    margin-bottom: 100px;
+
+}
+
+/* ======== INDICADORES (bolinhas) ======== */
+.indicadores {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px; 
+  position: static; 
+}
+
+.indicador {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.indicador:hover {
+  transform: scale(1.2);
+}
+
+.indicador.ativo {
+  background: #31e6f0;
+}
+
+/* ==================== INICIO ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==================== BODY ==================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* rolagem suave */
+  transition: background 0.5s, color 0.5s;
+}
+
+/* ==================== TROCA DE TEMA ==================== */
+h1, h2, h3, h4, p {
+  transition: color 0.5s;
+}
+
+/* ========== BOTÃO DE TROCA ========== */
+
+/* === Estilo base igual para ambos === */
+#btn-tema,
+#btn-tema-mobile {
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #4fc2f7, #F5C542);
+  box-shadow: 0 0 10px #4fc2f7;
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 10000;
+}
+
+/* === Posição fixa apenas no desktop === */
+#btn-tema {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}
+
+/* === Hover padrão === */
+#btn-tema:hover,
+#btn-tema-mobile:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #F5C542;
+}
+
+/* === Tema claro === */
+body.light #btn-tema,
+body.light #btn-tema-mobile {
+  background: linear-gradient(135deg, #31e6f0, #f3008e);
+  box-shadow: 0 0 10px #31e6f0;
+}
+
+body.light #btn-tema:hover,
+body.light #btn-tema-mobile:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #f3008e;
+}
+
+/* === Controle de visibilidade === */
+#btn-tema-mobile {
+  display: none; /* escondido no desktop */
+}
+
+/* ===== Barra de saudação dinâmica ===== */
+#barra-saudacao {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: linear-gradient(90deg, #F5C542, #00C0FF);
+  color: #0B132B;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 10;
+}
+
+#barra-saudacao span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: moverTexto 12s linear infinite;
+}
+
+
+@keyframes moverTexto {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* ======================= CABEÇALHO ======================= */
+header {
+  background: linear-gradient(135deg, #f3008e, #31e6f0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.4s ease-in-out;
+}
+
+header.hidden {
+  top: -100px; /* move o header para fora da tela */
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;   
+  gap: 10px;        
+}
+
+header .nome,
+header nav a,
+.menu-mobile a {
+  background: #252525;
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  border: 1px solid #31e6f0;
+}
+
+header nav a:hover,
+.menu-mobile a:hover  {
+  background: #31e6f0;
+  color: #f3008e;
+  transform: scale(1.1);
+  border: 1px solid #f3008e;
+}
+
+header .nome {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+header nav a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 1rem;
+}
+
+/* ======================= SEÇÕES ======================= */
+section {
+  padding: 50px 10%;
+  text-align: center;
+  background: #0d0d0d;
+  transition: all 0.4s ease;
+  position: relative;
+  border-radius: 2%;
+  margin: 50px auto;
+  border-top: 20px solid #31e6f0;
+  border-left: 2px solid #31e6f0;
+  border-right: 2px solid #31e6f0;
+  border-bottom: 20px solid #31e6f0;
+  width: 80%;
+}
+
+section:hover {
+  border-top: 20px solid #f3008e;  
+  border-left: 2px solid #f3008e;
+  border-right: 2px solid #f3008e; 
+  border-bottom: 20px solid #f3008e;
+  box-shadow: 0 0 20px #f3008e;
+  transform: scale(1.05);
+}
+
+h2 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: #f3008e;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  text-shadow: 0 0 10px #f3008e;
+}
+
+h2:hover {
+  color: #31e6f0;
+  text-shadow: 0 0 20px #31e6f0;
+  transform: scale(1.1);
+}
+
+/* ======================= QUADRILÁTEROS ======================= */
+.quadrilatero {
+  background: #252525;
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px #f3008e;
+  transition: all 0.5s ease;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.quadrilatero:hover {
+  box-shadow: 0 0 10px #31e6f0;
+  transform: scale(1.05);
+}
+
+.quadrilatero h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.quadrilatero h3:hover {
+  transform: scale(1.05);
+  border: 2px solid #f3008e;
+  padding: 10px;
+
+  border-radius: 8px;
+  background: rgba(0,0,0,0.2);
+}
+
+.quadrilatero h4 {
+  font-size: 20px;
+  margin: 5px;
+  font-weight: normal;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+
+.quadrilatero h4:hover {
+  border: 2px solid #f3008e;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.2);
+}
+
+
+/* ======================= SESSÃO SOBRE MIM ======================= */
+#sobre-mim {
+  display: flex;
+  flex-direction: column; /* 🔹 Coloca tudo em coluna */
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* Espaço entre carrossel e texto */
+  padding: 60px 20px;
+  background-color: #0d0d0d;
+  color: white;
+  text-align: center;
+}
+
+
+.container-sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}  
+
+/* ======================= CARDS DE PROJETOS ======================= */
+.projeto {
+  background: #252525;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 0 10px #f3008e;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+.projeto img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  border: 3px solid #f3008e;
+  margin-bottom: 15px;
+  transition: all 0.5s ease;
+}
+
+.projeto:hover img {
+  border: 3px solid #31e6f0;
+  box-shadow: 0 0 20px #31e6f0;
+}
+
+.projeto h3, .projeto h4 {
+  margin: 10px 0;
+  transition: all 0.4s ease;
+}
+
+.projeto h3:hover, .projeto h4:hover {
+  transform: scale(1.05);
+  border: 2px solid #f3008e;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.2);
+}
+
+/* ======================= PROJETOS ======================= */
+#projetos .projeto-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.projeto {
+  background: #252525;
+  border-radius: 15px;
+  padding: 30px; /* aumenta o espaço interno do card */
+  margin-top: 30px; /* aumenta a distância entre os cards e outros elementos */
+  box-shadow: 0 0 10px #f3008e;
+  transition: all 0.4s ease;
+}
+
+.projeto:hover {
+  border: 3px solid #31e6f0;
+  box-shadow: 0 0 20px #31e6f0;
+}
+
+.projeto img{
+  width: 250px;
+  height: 250px;
+  border-radius: 10%;
+  border: 3px solid #f3008e;
+  margin-bottom: 20px;
+  transition: all 0.7s ease;
+}
+
+.projeto:hover img { 
+  border: 3px solid #31e6f0; 
+  box-shadow: 0 0 20px #31e6f0; 
+}
+
+.linguagens {
+  font-size: 25px;
+  margin-bottom: 15px;
+  transition: all 0.5s ease;
+  color: #31e6f0;
+}
+
+.linguagens:hover {
+  transform: scale(1.05);
+  border: 2px solid #f3008e;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.2);
+}
+
+/* ======================= BOTÕES ======================= */
+.btn-projeto,
+.btn-codigo {
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+  margin: 5px;
+  display: inline-block;
+  background: #31e6f0;
+  box-shadow: 0 0 10PX #31e6f0;
+  color: #000000;
+  text-decoration: none;
+}
+
+.btn-projeto:hover,
+.btn-codigo:hover {
+  background: #f3008e;
+  color: #fff;
+  box-shadow: 0 0 15px #f3008e;
+  transform: scale(1.20);
+}
+
+/* ======================= CARDS DE CONTATO ======================= */
+.card-contato {
+  background: rgba(5, 41, 161, 0.5);
+  outline: 2px solid #000;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px #f3008e;
+  transition: all 0.5s ease;
+  width: 100%;             /* ocupa toda largura do container */
+}
+
+.card-contato:hover {
+  box-shadow: 0 0 20px #31e6f0;
+}
+
+.card-contato h4 {
+  color: #f3008e;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.card-contato:hover h4 {
+  color: #31e6f0;
+}
+
+.card-contato p {
+  display: inline-block;  /* caixa só envolve o texto */
+  transition: all 0.5s ease;
+  margin: 5px 0;          /* opcional, para espaçamento */
+  padding: 0;             /* padding inicial */
+}
+
+.card-contato a, .card-contato p {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.card-contato:hover a, .card-contato:hover p {
+  color: #f3008e;
+  border: 2px solid #f3008e;
+  padding: 6px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+
+
+/* ======================= CONTATO ======================= */
+.contato-container {
+  display: flex;
+  gap: 30px;              /* espaço entre cards e formulário */
+  padding: 40px 20px;
+  flex-wrap: wrap;        /* responsivo */
+  align-items: flex-start;
+  justify-content: center; /* centraliza melhor */
+}
+
+/* Cards de contato (lado esquerdo) */
+.cards {
+  display: flex;
+  flex-direction: column; /* empilha verticalmente */
+  gap: 20px;
+  flex: 0 0 30%;          /* ocupa 30% fixos do espaço */
+  max-width: 400px;       /* evita estourar */
+  min-width: 250px;       /* mantém legível em telas pequenas */
+}
+
+/* Cada mini card de contato */
+.mini-contato {
+  width: 100%;
+  text-align: center;
+  background: #4FC3F7;    /* exemplo de fundo */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+
+/* Campos do formulário */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+/* ======================= FORMULÁRIO DE CONTATO ======================= */
+.formulario {
+  flex: 1;                
+  max-width: 500px;
+  background: rgba(5, 41, 161, 0.5);
+  outline: 2px solid #000;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 20px #f3008e;
+  transition: all 0.5s ease;
+}
+
+.formulario:hover {
+  box-shadow: 0 0 20px #31e6f0;
+}
+
+.formulario h3 {
+  color: #f3008e;
+  margin-bottom: 15px;
+  transition: all 0.5s ease;
+}
+
+.formulario:hover h3 {
+  transform: scale(1.05);
+  color: #31e6f0;
+}
+
+.formulario input,
+.formulario textarea {
+  outline: 2px solid #000000;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: 2px solid #000000;
+  background: #86cecb;
+}
+
+.campo {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.campo input,
+.campo textarea {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #007bff;
+}
+
+.erro {
+  color: #ff3b3b;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  min-height: 18px; /* mantém espaço mesmo sem erro */
+}
+
+input.erro-borda,
+textarea.erro-borda {
+  border-color: #ff3b3b;
+}
+
+/* ======================= RODAPÉ ======================= */
+footer {
+  background: linear-gradient(135deg, #f3008e, #31e6f0);
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* ======================= RESPONSIVIDADE COMPLETA ======================= */
+@media (max-width: 768px) {
+
+  /* ======== CABEÇALHO ======== */
+  header {
+    flex-direction: column;
+    padding: 10px 5%;
+  }
+
+  header .nome,
+  header nav a {
+    font-size: 0.9rem;     /* diminui tamanho do texto */
+    margin-left: 0;         /* remove margem lateral */
+    margin-bottom: 5px;     /* adiciona espaçamento vertical */
+    padding: 5px 10px;      /* padding mais compacto */
+  }
+
+  header nav {
+    flex-direction: column;
+    width: 100%;
+    display: none;          /* escondido até abrir menu hamburguer */
+    background: #3FC1FF;
+    border-radius: 0 0 12px 12px;
+    text-align: center;
+  }
+
+  nav.mostrar {
+    display: flex;
+  }
+  
+  /* Ícone do menu hamburguer */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 10001;
+  }
+
+  #btn-tema {
+    display: none; /* esconde o fixo no topo */
+  }
+
+  #btn-tema-mobile {
+    display: block;
+    position: relative; /* aparece dentro do menu */
+    margin: 20px auto;
+  }
+
+  /* ======== SEÇÕES ======== */
+  section {
+    padding: 30px 5%;  
+    width: 90%;
+  }
+
+  /* ======== SOBRE MIM ======== */
+  #sobre-mim {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    padding: 40px 10px;
+  }
+
+  .container-sobre {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  /* ======== PROJETOS ======== */
+  #projetos .projeto-container {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .projeto {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .projeto img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ======== CONTATO ======== */
+  .contato-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 10px;
+  }
+
+  .cards {
+    flex: 1 1 100%;
+    max-width: 350px;
+  }
+
+  .formulario {
+    flex: 1 1 100%;
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  input, textarea {
+    font-size: 0.95rem;
+  }
+
+  /* ======== CARROSSEL ======== */
+  .cena {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 20px auto;
+  }
+
+  .carrossel {
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide {
+    width: 200px;
+    height: 200px;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+    position: static;
+  }
+
+  .indicador {
+    width: 10px;
+    height: 10px;
+  }
+
+  .indicador.ativo {
+    background-color: #31e6f0;
+  }
+
+  /* ======== MODAIS ======== */
+  .modal {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .modal h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal p {
+    font-size: 0.9rem;
+  }
+
+  .modal button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .modal-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ======== RODAPÉ ======== */
+  footer {
+    font-size: 18px;
+    padding: 12px;
+  }
+}
